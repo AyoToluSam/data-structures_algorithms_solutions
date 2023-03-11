@@ -5,8 +5,8 @@ could rent but her condition to rent on any block is proximity
 to the buildings she requires e.g. Church, Supermarket, etc.
 The community is guaranteed to have at least one of such buildings in
 any of the blocks.
-Now she wants to know, and more importantly minimize the farthest distance
-that she has to move in order to access all of the required buildings.
+Now she wants to know which block minimizes the farthest distance that she has 
+to move in order to access all of the required buildings.
 
 For example, if Church is in block 1 but Supermarket is all the way in
 block 5, whereas in block 5, there is no church but a church is just above in
@@ -69,16 +69,18 @@ const findAppartment = (blocks, reqs) => {
     results.push(distance);
   };
 
-  console.log("Distances of requirements in each block: ", results);
+  console.log("Distances of requirements from each block: ", results);
 
   const maxDistances = results.map((result) => Math.max(...Object.values(result)));
 
   const minDistance = Math.min(...maxDistances);
 
-  const blockIndex = maxDistances.indexOf(minDistance)
+  const blockIndex = maxDistances.indexOf(minDistance);
   
-  console.log("The minimum distance before finding all requirements is: ", minDistance)
-  console.log("The suitable block is: ", blockIndex)
+  console.log("The minimum distance before finding all requirements is: ", minDistance);
+  console.log("The suitable block is: ", blockIndex);
+
+  return blockIndex;
 }
 
 
