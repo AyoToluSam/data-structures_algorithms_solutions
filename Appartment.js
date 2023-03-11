@@ -5,14 +5,14 @@ could rent but her condition to rent on any block is proximity
 to the buildings she requires e.g. Church, Supermarket, etc.
 The community is guaranteed to have at least one of such buildings in
 any of the blocks.
-Now she wants to know the farthest distance she has to move in order to
-access all of the required buildings.
+Now she wants to know, and more importantly minimize the farthest distance
+that she has to move in order to access all of the required buildings.
 
 For example, if Church is in block 1 but Supermarket is all the way in
 block 5, whereas in block 5, there is no church but a church is just above in
 block 4. It makes block 5 more suitable for her than block 1 because in
 block 5 the farthest distance she has to move in order to access both 
-Church and Supermarket is 1.
+Church and Supermarket is 1 compared to a distance of 4 if she's in block 1.
 */
 
 const buildingBlocks = [
