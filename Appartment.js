@@ -71,9 +71,7 @@ const findAppartment = (blocks, reqs) => {
 
   console.log("Distances of requirements in each block: ", results);
 
-  const maxDistances = results.map((result) => {
-    return Math.max(...Object.values(result));
-  })
+  const maxDistances = results.map((result) => Math.max(...Object.values(result)));
 
   const minDistance = Math.min(...maxDistances);
 
